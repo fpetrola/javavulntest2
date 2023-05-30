@@ -1,0 +1,110 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.4",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2023-02-06T18:15:48Z",
+    "tools" : [
+      {
+        "name" : "Sonatype Lift",
+        "version" : "1.0.55-SNAPSHOT"
+      }
+    ],
+    "component" : {
+      "group" : "com.doddi.test",
+      "name" : "java_vuln_test",
+      "version" : "1.0.8-SNAPSHOT",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "fgk"
+        }
+      ],
+      "type" : "application",
+      "bom-ref" : "pkg:application/com.doddi.test/java_vuln_test@1.0.8-SNAPSHOT"
+    }
+  },
+  "components" : [
+    {
+      "name" : "java_vuln_test",
+      "version" : "1.0.8-SNAPSHOT",
+      "purl" : "pkg:maven/com.doddi.test/java_vuln_test@1.0.8-SNAPSHOT",
+      "properties" : [
+        {
+          "name" : "sonatype:ossi:score",
+          "value" : "0.0"
+        }
+      ],
+      "type" : "library",
+      "bom-ref" : "pkg:maven/com.doddi.test/java_vuln_test@1.0.8-SNAPSHOT"
+    },
+    {
+      "name" : "jackson-databind",
+      "version" : "2.10.5",
+      "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.10.5",
+      "properties" : [
+        {
+          "name" : "sonatype:ossi:score",
+          "value" : "0.0"
+        }
+      ],
+      "type" : "library",
+      "bom-ref" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.10.5"
+    },
+    {
+      "name" : "jackson-annotations",
+      "version" : "2.10.5",
+      "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.10.5",
+      "properties" : [
+        {
+          "name" : "sonatype:ossi:score",
+          "value" : "0.0"
+        }
+      ],
+      "type" : "library",
+      "bom-ref" : "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.10.5"
+    },
+    {
+      "name" : "jackson-core",
+      "version" : "2.10.5",
+      "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.10.5",
+      "properties" : [
+        {
+          "name" : "sonatype:ossi:score",
+          "value" : "0.0"
+        }
+      ],
+      "type" : "library",
+      "bom-ref" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.10.5"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:application/com.doddi.test/java_vuln_test@1.0.8-SNAPSHOT",
+      "dependsOn" : [
+        "pkg:maven/com.doddi.test/java_vuln_test@1.0.8-SNAPSHOT"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/com.doddi.test/java_vuln_test@1.0.8-SNAPSHOT",
+      "dependsOn" : [
+        "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.10.5"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.10.5",
+      "dependsOn" : [
+        "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.10.5",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.10.5"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.10.5",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.10.5",
+      "dependsOn" : [ ]
+    }
+  ]
+}
